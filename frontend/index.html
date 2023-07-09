@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LurkForWork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/global.css" />
+</head>
+<body>
+    <!-- This is an example app structure, you can modify this as much as you choose --> 
+    <header>
+        <h1>lurkforwork.com</h1>
+        <nav class="navbar">
+            <!-- Fragment URL Implementation -->
+            <!-- <li id="home" class="nav-link"><a href="#home">Home</a></li>
+            <li id="post" class="nav-link"><a href="#post">Post</a></li>
+            <li id="profile" class="nav-link"><a href="#profile">Profile</a></li> -->
+
+            <li id="home" class="nav-link">Home</li>
+            <li id="post" class="nav-link">Post</li>
+            <li id="profile" class="nav-link">Profile</li>
+        </nav>
+    </header>
+    <main role="main">
+        <!-- MILESTONE 1: ATUH -->
+        <div id="auth-container">
+            <form id="auth-form" name="form" >
+                <label>
+                    Name:
+                    <input type="text" id="name-auth-page" name="name"><br>
+                </label>
+                
+                <label>
+                    Email:
+                    <input type="email" id="email-auth-page" name="email"><br>
+                </label>
+
+                <label>
+                    Password: 
+                    <input type="password" id="password-auth-page" name="password"><br>
+                </label>
+              
+                <input type="submit" value="Login" id="login-btn">
+                <input type="submit" value="Register" id="register-btn">
+            </form>
+        </div>
+
+        <!-- MILESTONE 2: JOB FEED -->
+        <div id="feed-view" style="display: none;">
+            <form id="follow-form" name="form" >
+                <label>
+                    <input type="text" id="follow-email" name="follow-email" value="Email">
+                </label>
+                <input type="submit" value="Watch New User" id="follow-btn-feed">
+            </form>
+
+            <div class="feed" id="job-feed"></div>
+        </div>
+
+        <!-- MILESTONE 3: ADV JOB FEED -->
+
+        <!-- MILESTONE 4: PROFILE -->
+        <div id="my-profile-view" style="display: none;">
+            <h3>Click on any of the fields to change your details</h1>
+            <form id="add-profile-form" name="form" >
+                <label>
+                    Email:
+                    <input type="text" id="email-profile-page" name="email"><br>
+                </label>
+                
+                <label>
+                    Password:
+                    <input type="text" id="password-profile-page" name="password"><br>
+                </label>
+            
+                <label>
+                    Name: 
+                    <input type="text" id="name-profile-page" name="name"><br>
+                </label>
+                
+                <label>
+                    Image:
+                    <input type="text" id="image-profile-page" name="image"><br>
+                </label>
+
+                <input type="submit" value="Save Changes" id="update-btn-profile-page">
+            </form>
+            <div id="my-posts" class="feed"></div>              
+        </div>
+
+        <div id="poster-profile-view" style="display: none;">
+            <h3>Poster's Profile</h3>
+        </div>
+
+        <!-- MILESTONE 5: ADD/UPDATE CONTENT -->
+        <div id="post-view" style="display: none;">
+            <form id="add-job-form" name="form" >
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title"><br>
+
+                <label for="start">Start: </label>
+                <input type="text" name="start" id="start"><br>
+
+                <label for="description">Description: </label>
+                <input type="text" name="description" id="description"><br>
+
+                <!-- <div id="dropzone">Drop image here</div>
+                <p id="file-uploading-indicator" style="display: none;">Uploading...</p>
+                <p id="upload-success-indicator" style="display: none;">Uploaded!</p>
+                <label>
+                    <input type="file" id="image" name="image" multiple accept=".jpg,.jpeg,.png,.gif">
+                </label> -->
+                <div id="post-file-upload"></div>
+                <br/>
+
+                <input type="submit" value="Submit" id="post-btn">
+            </form>
+        </div>
+
+        <div id="modal-space"></div>
+    </main>
+    <!-- <footer>
+        <p>&copy; lurkforwork.com 2022</p>
+    </footer> -->
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

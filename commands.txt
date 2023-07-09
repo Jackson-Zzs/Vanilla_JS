@@ -1,0 +1,4 @@
+https://gitlab.cse.unsw.edu.au/COMP6080/23T1/groups/NITROGENIC/lurkforwork
+
+npx http-server frontend -c 1 -p 8080
+npx yarn start
